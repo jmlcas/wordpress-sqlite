@@ -1,0 +1,10 @@
+services:
+
+  wordpress:
+    image: soulteary/sqlite-wordpress:latest
+    container_name: wordpress
+    restart: unless-stopped
+    ports:
+      - "8200:80"
+    volumes:
+      - ./data:/var/www/html
